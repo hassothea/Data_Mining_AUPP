@@ -91,7 +91,13 @@ background-size: cover;
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><strong>Introduction</strong></a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><strong>Introduction</strong></a>
+  <ul class="collapse">
+  <li><a href="#course-overview" id="toc-course-overview" class="nav-link" data-scroll-target="#course-overview">📋 <strong>Course Overview</strong></a>
+  <ul class="collapse">
+  <li><a href="#key-topics-covered" id="toc-key-topics-covered" class="nav-link" data-scroll-target="#key-topics-covered">Key Topics Covered</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#course-criteria" id="toc-course-criteria" class="nav-link" data-scroll-target="#course-criteria"><strong>Course Criteria</strong></a>
   <ul class="collapse">
   <li><a href="#programming" id="toc-programming" class="nav-link" data-scroll-target="#programming"><strong>Programming:</strong></a></li>
@@ -116,19 +122,44 @@ background-size: cover;
 <section id="introduction" class="level1">
 <h1><strong>Introduction</strong></h1>
 <p>Welcome to the <strong>Data Mining and Knowledge Recovery Course</strong>!</p>
-<p>Embark on an exciting journey into the world of data with our comprehensive <strong>Data Analysis course</strong>. This course covers everything you need to know to transform raw data into meaningful insights.</p>
+<p>This course provides a comprehensive introduction to the <strong>principles</strong>, <strong>algorithms</strong>, and <strong>applications of data mining</strong>, equipping you with the tools to transform <em>raw data</em> into <em>actionable knowledge</em>. From <em>preprocessing</em>, <em>exploratory data analysis</em> and <em>model development</em> for <em>regressions</em> or <em>classification</em> to clustering and association rule mining, you’ll learn how to tackle real-world challenges in fields like healthcare, finance, marketing, and beyond.</p>
 <hr>
-<p>📋 <strong>Course Highlights:</strong></p>
+<section id="course-overview" class="level2">
+<h2 class="anchored" data-anchor-id="course-overview">📋 <strong>Course Overview</strong></h2>
+<section id="key-topics-covered" class="level3">
+<h3 class="anchored" data-anchor-id="key-topics-covered">Key Topics Covered</h3>
+<ol type="1">
+<li><strong>Fundamentals of Data Mining</strong></li>
+</ol>
 <ul>
-<li><strong>Introduction to Data Analysis:</strong> Dive into the world of data analysis, its significance, and real-world applications.</li>
-<li><strong>Data Types and Descriptive Statistics:</strong> Learn to identify different data types and understand measures of central tendency, dispersion, and summary statistics.</li>
-<li><strong>Data Collection and Cleaning:</strong> Master the art of gathering data from various sources, handling missing data, and cleaning datasets for accurate analysis.</li>
-<li><strong>Data Visualization Basics:</strong> Explore essential tools and techniques to present data effectively and make impactful visualizations.</li>
-<li><strong>Exploratory Data Analysis (EDA):</strong> Develop skills to identify trends, patterns, and anomalies in datasets, guiding deeper analysis.</li>
-<li><strong>Practical Labs for Data Analysis:</strong> Gain hands-on experience with Python and/or R to perform data analysis and create comprehensive visualizations.</li>
+<li>The knowledge discovery process (KDD)</li>
+<li>Data types, quality, and preprocessing (cleaning, transformation)</li>
+<li>Exploratory Data Analysis (EDA) for knowledge extraction</li>
 </ul>
-<p>By the end of this course, you’ll have a solid foundation in data analysis, empowering you to make data-driven decisions and insights. Whether you’re a beginner or looking to enhance your skills, this course has something for everyone.</p>
+<ol start="2" type="1">
+<li><strong>Core Techniques</strong></li>
+</ol>
+<ul>
+<li>Classification/Regression (<em>kNN, Decision Trees, SVM, Naïve Bayes</em>)</li>
+<li>Clustering (<em>k-Means, Hierarchical, DBSCAN</em>)</li>
+<li>Association Rule Mining</li>
+<li>Anomaly Detection</li>
+<li>Advanced Methods (<em>Ensemble learning</em>)</li>
+</ul>
+<ol start="3" type="1">
+<li>Dimensionality reduction (<em>PCA, t-SNE</em>)</li>
+</ol>
+<ul>
+<li>Text mining and NLP basics</li>
+<li>Deep learning for data mining (introductory)</li>
+<li>Practical Applications</li>
+<li>Case studies in healthcare, e-commerce, and social networks</li>
+<li>Ethical considerations and pitfalls (bias, privacy)</li>
+</ul>
+<p>By the end of this course, you’ll have a solid knowledge in <strong>Data Mining</strong> and its techniques, empowering you to make data-driven decisions and insights. If you are looking to enhance your skills in <strong>Data Mining</strong>, this course has something for everyone.</p>
 <hr>
+</section>
+</section>
 </section>
 <section id="course-criteria" class="level1">
 <h1><strong>Course Criteria</strong></h1>
@@ -289,15 +320,15 @@ background-size: cover;
 </section>
 <section id="resources-and-further-reading" class="level1">
 <h1><strong>Resources and Further Reading</strong></h1>
-<p>Here, you will find additional resources, including books, research papers, and online courses, to further your understanding of <strong>Data Analysis</strong>.</p>
+<p>Here, you will find additional resources, including books, research papers, and online courses, to further your understanding of <strong>Data Mining</strong>.</p>
 <p>📚 You will find these books/links helpful…</p>
 <ul>
-<li><p><a href="https://content.e-bookshelf.de/media/reading/L-11307411-11b3dd5f67.pdf" target="_blank">A General Introduction to Data Analytics, Moreira et al.&nbsp;2019</a></p></li>
-<li><p><a href="https://www.advisory21.com.mt/wp-content/uploads/2023/05/Data-Science-for-Business.pdf" target="_blank">Data Sience for Business, Foster Provost &amp; Tom Fawcett</a></p></li>
+<li><p><a href="https://www-users.cse.umn.edu/~kumar001/dmbook/index.php" target="_blank">Introduction to Data Mining – Pang-Ning Tan, Michael Steinbach, Vipin Kumar</a></p></li>
+<li><p><a href="https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf" target="_blank">Data Mining: Concepts and Techniques – Jiawei Han, Micheline Kamber, Jian Pei</a></p></li>
 <li><p><a href="https://github.com/PacktPublishing/Exploratory-Data-Analysis-with-Python-Cookbook?tab=readme-ov-file" target="_blank">Exploratory-Data-Analysis-with-Python-Cookbook</a></p></li>
-<li><p><a href="https://haralick.org/DV/Handbook_of_Data_Visualization.pdf" target="_blank">Handbook of Data Visualization, Chen et al.</a></p></li>
-<li><p><a href="https://wesmckinney.com/book/" target="_blank">Python for Data Analysis, Wes M.</a></p></li>
-<li><p><a href="https://bookdown.org/rdpeng/exdata/" target="_blank">Exploratory Data Analysis with R, Roger D. Peng</a></p></li>
+<li><p><a href="http://14.139.161.31/OddSem-0822-1122/Hands-On_Machine_Learning_with_Scikit-Learn-Keras-and-TensorFlow-2nd-Edition-Aurelien-Geron.pdf" target="_blank">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow – Aurélien Géron</a></p></li>
+<li><p><a href="http://www.mmds.org/" target="_blank">Mining of Massive Datasets” – Jure Leskovec, Anand Rajaraman, Jeff Ullman</a></p></li>
+<li><p><a href="https://hastie.su.domains/ElemStatLearn/" target="_blank">The Elements of Statistical Learning” – Trevor Hastie, Robert Tibshirani, Jerome Friedman</a></p></li>
 <li><p><a href="https://batrachos.com/sites/default/files/pictures/Books/Wickham_Grolemund_2017_R%20for%20Data%20Science.pdf" target="_blank">R for Data Science, Hadley W. and Garrett G.</a></p></li>
 </ul>
 <hr>
