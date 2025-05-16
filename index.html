@@ -122,7 +122,7 @@ background-size: cover;
 <section id="introduction" class="level1">
 <h1><strong>Introduction</strong></h1>
 <p>Welcome to the <strong>Data Mining and Knowledge Recovery Course</strong>!</p>
-<p>This course provides a comprehensive introduction to the <strong>principles</strong>, <strong>algorithms</strong>, and <strong>applications of data mining</strong>, equipping you with the tools to transform <em>raw data</em> into <em>actionable knowledge</em>. From <em>preprocessing</em>, <em>exploratory data analysis</em> and <em>model development</em> for <em>regressions</em> or <em>classification</em> to <em>clustering</em> and <em>association rule mining</em>, you’ll learn how to tackle real-world challenges in fields like healthcare, finance, marketing, and beyond.</p>
+<p>This course provides a comprehensive introduction to the <strong>principles</strong>, <strong>algorithms</strong>, and <strong>applications of data mining</strong>, equipping you with the tools to transform <em>raw data</em> into <em>actionable knowledge</em>. From <em>preprocessing</em>, <em>analyzing</em> and <em>model development</em> for <em>classification</em> or <em>regression</em> to <em>clustering</em> and <em>association rule mining</em>, you’ll learn how to tackle real-world challenges in fields like healthcare, finance, marketing, and beyond.</p>
 <hr>
 <section id="course-overview" class="level2">
 <h2 class="anchored" data-anchor-id="course-overview">📋 <strong>Course Overview</strong></h2>
@@ -252,65 +252,89 @@ background-size: cover;
 <section id="project" class="level2">
 <h2 class="anchored" data-anchor-id="project"><strong>Project:</strong></h2>
 <ul>
-<li>Deadline for the report: <code>...Loading</code>.</li>
-<li>Where to submit: <code>Canvas</code></li>
-<li>Your report should be in (your favorite) <strong>PDF</strong> format and include the following criteria:
+<li><p>Deadline for the report: <code>...Loading</code>.</p></li>
+<li><p>Where to submit: <code>Canvas</code></p></li>
+<li><p>Your report should be in (your favorite) <strong>PDF</strong> format and include the following criteria:</p></li>
+</ul>
+<ol type="1">
+<li><strong>Introduction</strong></li>
+</ol>
 <ul>
-<li><strong>Members’ names &amp; contributions</strong>.
+<li><strong>Objective:</strong> Clearly define the problem (e.g., classification, clustering, pattern mining).</li>
+<li><strong>Dataset:</strong> Describe the source, size, and features (e.g., UCI Repository, Kaggle).</li>
+<li><strong>Relevance:</strong> Why is this problem interesting from a data mining perspective?</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Data Preprocessing</strong></li>
+</ol>
 <ul>
-<li>Clearly state each member’s contribution to the report.</li>
-<li>For example:
+<li><strong>Data Cleaning:</strong> Handling missing values, duplicates, noise (e.g., binning, interpolation).</li>
+<li><strong>Feature Transformation:</strong> Normalization, discretization, encoding (e.g., one-hot).</li>
+<li><strong>Feature Selection:</strong> Techniques used (e.g., PCA, correlation analysis, wrapper methods).</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Exploratory Data Analysis (EDA)</strong></li>
+</ol>
 <ul>
-<li><strong>Luffy</strong>: Introduction, Data Preprocessing</li>
-<li><strong>Gojo</strong>: Exploratory Data Analysis, Model Development</li>
-<li><strong>Naruto</strong>: Results and Evaluation, Conclusion</li>
-</ul></li>
-</ul></li>
-<li><strong>Introduction</strong>:
+<li><strong>Descriptive Statistics:</strong> Mean, variance, distributions (include tables/visualizations).</li>
+<li><strong>Visualizations:</strong> Heatmaps, histograms, scatter plots for feature relationships.</li>
+<li><strong>Insights:</strong> Uncover preliminary patterns (e.g., class imbalance, outliers).</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Data Mining Techniques Applied</strong></li>
+</ol>
+<p>(<em>Split into subsections based on your project’s focus</em>)</p>
+<p><strong>A. Model Development</strong></p>
 <ul>
-<li>Clearly state the objectives and purpose of the analysis.</li>
-<li>Provide a brief overview of the dataset used.</li>
-</ul></li>
-<li><strong>Data Preprocessing</strong>:
+<li><strong>Algorithms:</strong> Justify choices (e.g., Decision Trees for interpretability, SVM for high dimensions).</li>
+<li><strong>Training/Testing:</strong> Choice, split strategy (e.g., 80/20, cross-validation).</li>
+<li><strong>Hyperparameter Tuning:</strong> Methods used (e.g., grid search, random search).</li>
+</ul>
+<p><strong>B. Alternative Approaches</strong></p>
 <ul>
-<li>Detail steps taken to clean and preprocess the data.</li>
-<li>Explain handling of missing values and outliers.</li>
-<li>Describe any feature engineering techniques applied.</li>
-</ul></li>
-<li><strong>Exploratory Data Analysis (EDA)</strong>:
+<li><strong>Compare at least 2 techniques</strong> (e.g., clustering with k-means vs.&nbsp;DBSCAN).</li>
+<li><strong>Mention ensemble methods</strong> (e.g., Random Forest, Boosting) if applicable.</li>
+</ul>
+<ol start="5" type="1">
+<li><strong>Results &amp; Evaluation</strong></li>
+</ol>
 <ul>
-<li>Include visualizations (charts, graphs) and descriptive statistics.</li>
-<li>Identify key patterns, trends, and anomalies in the data.</li>
-</ul></li>
-<li><strong>Model Development</strong>:
+<li><strong>Metrics:</strong> Use domain-appropriate measures:
 <ul>
-<li>Explain the choice of model(s) and rationale behind it.</li>
-<li>Provide details on model training, validation, and testing processes.</li>
-<li>Include any hyperparameter tuning and model optimization steps.</li>
+<li><strong>Classification:</strong> Accuracy, Precision, Recall, ROC-AUC.</li>
+<li><strong>Clustering:</strong> Silhouette Score, Dunn Index.</li>
+<li><strong>Association Rules:</strong> Support, Confidence, Lift.</li>
 </ul></li>
-<li><strong>Results and Evaluation</strong>:
+<li><strong>Visual Evidence:</strong> Confusion matrices, elbow plots, dendrograms.</li>
+<li><strong>Benchmarking:</strong> Compare against baselines (e.g., naive Bayes as a simple model).</li>
+</ul>
+<ol start="6" type="1">
+<li><strong>Discussion &amp; Challenges</strong></li>
+</ol>
 <ul>
-<li>Present model performance metrics (e.g., accuracy, precision, recall, F1-score, RMSE).</li>
-<li>Compare performance across different models if multiple were used.</li>
-<li>Highlight any insights or conclusions drawn from the model’s predictions.</li>
-</ul></li>
-<li><strong>Conclusion</strong>:
+<li><strong>Limitations:</strong> Data quality, computational constraints, assumptions.</li>
+<li><strong>Business/Research Implications:</strong> How do results translate to real-world solutions?</li>
+</ul>
+<ol start="7" type="1">
+<li><strong>Conclusion &amp; Future Work</strong></li>
+</ol>
 <ul>
-<li>Summarize key findings and their implications.</li>
-<li>Discuss any limitations of the analysis.</li>
-<li>Suggest potential areas for future research or improvement.</li>
-</ul></li>
-<li><strong>References</strong>:
+<li><strong>Summarize key findings</strong> (e.g., “k=3 clusters best segmented our customer data”).</li>
+<li><strong>Suggest improvements</strong> (e.g., deeper feature engineering, alternative algorithms).</li>
+</ul>
+<ol start="8" type="1">
+<li><strong>References</strong></li>
+</ol>
 <ul>
-<li>Cite all sources of data and any external libraries or tools used.</li>
-<li>Include academic references for any theoretical concepts or methods applied.</li>
-</ul></li>
-<li><strong>Appendix (Optional)</strong>:
+<li>Cite datasets, libraries (e.g., scikit-learn, Weka), and papers (e.g., on novel algorithms).</li>
+</ul>
+<ol start="9" type="1">
+<li><strong>Appendix (Optional)</strong></li>
+</ol>
 <ul>
-<li>Provide additional figures, tables, or code snippets that support the analysis.</li>
-</ul></li>
-</ul></li>
-<li><strong>Presentation</strong>:
+<li><p>Code Snippets: Critical steps (e.g., entropy calculation for decision trees).</p></li>
+<li><p>Extended Results: Additional graphs/tables omitted from the main report.</p></li>
+<li><p><strong>Presentation</strong>:</p>
 <ul>
 <li>A possible dates: <code>...Loading</code>.</li>
 </ul></li>
@@ -323,12 +347,13 @@ background-size: cover;
 <p>Here, you will find additional resources, including books, research papers, and online courses, to further your understanding of <strong>Data Mining</strong>.</p>
 <p>📚 You will find these books/links helpful…</p>
 <ul>
-<li><p><a href="https://www-users.cse.umn.edu/~kumar001/dmbook/index.php" target="_blank">Introduction to Data Mining – Pang-Ning Tan, Michael Steinbach, Vipin Kumar</a></p></li>
 <li><p><a href="https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf" target="_blank">Data Mining: Concepts and Techniques – Jiawei Han, Micheline Kamber, Jian Pei</a></p></li>
-<li><p><a href="https://github.com/PacktPublishing/Exploratory-Data-Analysis-with-Python-Cookbook?tab=readme-ov-file" target="_blank">Exploratory-Data-Analysis-with-Python-Cookbook</a></p></li>
+<li><p><a href="https://myweb.sabanciuniv.edu/rdehkharghani/files/2016/02/The-Morgan-Kaufmann-Series-in-Data-Management-Systems-Jiawei-Han-Micheline-Kamber-Jian-Pei-Data-Mining.-Concepts-and-Techniques-3rd-Edition-Morgan-Kaufmann-2011.pdf" target="_blank">Data Mining: Concepts and Techniques – Jiawei Han, Micheline Kamber, Jian Pei</a></p></li>
+<li><p><a href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=4df1d94469a4df3d4df0ce465ec2d7035efb08ad" target="_blank">Data Mining Techniques – Mohammed J. Zaki &amp; Limsoon Wong</a></p></li>
 <li><p><a href="http://14.139.161.31/OddSem-0822-1122/Hands-On_Machine_Learning_with_Scikit-Learn-Keras-and-TensorFlow-2nd-Edition-Aurelien-Geron.pdf" target="_blank">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow – Aurélien Géron</a></p></li>
 <li><p><a href="http://www.mmds.org/" target="_blank">Mining of Massive Datasets” – Jure Leskovec, Anand Rajaraman, Jeff Ullman</a></p></li>
 <li><p><a href="https://hastie.su.domains/ElemStatLearn/" target="_blank">The Elements of Statistical Learning” – Trevor Hastie, Robert Tibshirani, Jerome Friedman</a></p></li>
+<li><p><a href="https://github.com/PacktPublishing/Exploratory-Data-Analysis-with-Python-Cookbook?tab=readme-ov-file" target="_blank">Exploratory-Data-Analysis-with-Python-Cookbook</a></p></li>
 <li><p><a href="https://batrachos.com/sites/default/files/pictures/Books/Wickham_Grolemund_2017_R%20for%20Data%20Science.pdf" target="_blank">R for Data Science, Hadley W. and Garrett G.</a></p></li>
 </ul>
 <hr>
