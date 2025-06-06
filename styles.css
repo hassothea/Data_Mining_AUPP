@@ -20,6 +20,10 @@
     color: #345a8b;
 }
 
+.dark-bl{
+    color: #2b6899;
+}
+
 .light-blue {
     color: #394ae0;
 }
@@ -54,6 +58,31 @@
 .br1 {
     display: block;
     margin: 10px 0; /* Adjust the vertical space as needed */
+}
+
+.vspace1 {
+    display: block;
+    margin: -5px 0; /* Adjust the vertical space as needed */
+}
+
+.vspace2 {
+    display: block;
+    margin: -10px 0; /* Adjust the vertical space as needed */
+}
+
+.vspace3 {
+    display: block;
+    margin: -15px 0; /* Adjust the vertical space as needed */
+}
+
+.vspace4 {
+    display: block;
+    margin: -20px 0; /* Adjust the vertical space as needed */
+}
+
+.vspace5 {
+    display: block;
+    margin: -30px 0; /* Adjust the vertical space as needed */
 }
 
 .footnote {
