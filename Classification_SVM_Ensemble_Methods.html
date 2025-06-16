@@ -475,7 +475,7 @@
 </div>
 </div><div class="column" style="width:33%;">
 <div class="fragment" style="font-size: 70%">
-<div id="e8fd4a57" class="cell" data-execution_count="2">
+<div id="f6afa98c" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -483,7 +483,7 @@
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>data <span class="op">=</span> pd.read_csv(path <span class="op">+</span> <span class="st">"/heart.csv"</span>)</span>
 <span id="cb1-4" class="hljs-ln-code"><a href=""></a>data[[<span class="st">'age'</span>, <span class="st">'chol'</span>,<span class="st">'target'</span>]].sample(<span class="dv">3</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -817,7 +817,7 @@
 <li>Categorical inputs are encoded using <code>OneHotEncoding</code>.</li>
 <li>Standardization is also applied.</li>
 </ul>
-<div id="b1cdd2f7" class="cell" data-execution_count="4">
+<div id="384ccfda" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -887,7 +887,7 @@
 <span id="cb2-65"><a href=""></a>    index<span class="op">=</span>[<span class="st">"LSVM"</span>])</span>
 <span id="cb2-66"><a href=""></a>test_perf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -997,7 +997,7 @@
 <li>We try 3rd degree Polynomial and RBF Kernels.</li>
 </ul>
 <div style="font-size: 85%">
-<div id="0fed9595" class="cell" data-execution_count="5">
+<div id="1c9a0ed3" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a>svm_model <span class="op">=</span> SVC(kernel<span class="op">=</span><span class="st">'rbf'</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
@@ -1058,7 +1058,7 @@
 <span id="cb3-56"><a href=""></a>    index<span class="op">=</span>[<span class="st">"Poly3-SVM"</span>])])</span>
 <span id="cb3-57"><a href=""></a>test_perf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1208,8 +1208,8 @@
 <li>Tree hyperparameters: <code>max_depth</code>, <code>min_sample_split</code>, <code>min_samples_leaf</code> and <code>citerion</code>.</li>
 </ul></li>
 </ul>
-<div style="font-size: 80%">
-<div id="e34e91d3" class="cell" data-execution_count="6">
+<div style="font-size: 90%">
+<div id="ab68990b" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb4-1" class="hljs-ln-code"><a href=""></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> BaggingClassifier</span>
@@ -1226,7 +1226,7 @@
 <span id="cb4-12" class="hljs-ln-code"><a href=""></a>    <span class="st">'n_estimators'</span>: [<span class="dv">200</span>, <span class="dv">500</span>, <span class="dv">700</span>],  <span class="co"># Number of trees in Bagging</span></span>
 <span id="cb4-13" class="hljs-ln-code"><a href=""></a>    <span class="st">'max_samples'</span>: [<span class="fl">0.1</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>],  <span class="co"># Proportion of samples per tree</span></span>
 <span id="cb4-14" class="hljs-ln-code"><a href=""></a>    <span class="st">'estimator__min_samples_split'</span>: [<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">10</span>],  <span class="co"># Minimum samples to split</span></span>
-<span id="cb4-15" class="hljs-ln-code"><a href=""></a>    <span class="st">'estimator__min_samples_leaf'</span>: [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">10</span>],  <span class="co"># Minimum samples per leaf</span></span>
+<span id="cb4-15" class="hljs-ln-code"><a href=""></a>    <span class="st">'estimator__min_samples_leaf'</span>: [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">10</span>],  <span class="co"># Minimum samples per leaf</span></span>
 <span id="cb4-16" class="hljs-ln-code"><a href=""></a>    <span class="st">'estimator__criterion'</span>: [<span class="st">"gini"</span>, <span class="st">"entropy"</span>],  <span class="co"># Splitting criterion</span></span>
 <span id="cb4-17" class="hljs-ln-code"><a href=""></a>}</span>
 <span id="cb4-18" class="hljs-ln-code"><a href=""></a></span>
@@ -1250,9 +1250,9 @@
 <span id="cb4-36" class="hljs-ln-code"><a href=""></a>test_perf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Best parameters: {'estimator__criterion': 'entropy', 'estimator__min_samples_leaf': 2, 'estimator__min_samples_split': 2, 'max_samples': 0.25, 'n_estimators': 700}</code></pre>
+<pre><code>Best parameters: {'estimator__criterion': 'gini', 'estimator__min_samples_leaf': 3, 'estimator__min_samples_split': 5, 'max_samples': 0.25, 'n_estimators': 500}</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1306,11 +1306,11 @@
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Bagging</td>
-<td>0.803279</td>
-<td>0.862069</td>
-<td>0.757576</td>
+<td>0.770492</td>
 <td>0.806452</td>
-<td>0.807359</td>
+<td>0.757576</td>
+<td>0.781250</td>
+<td>0.771645</td>
 </tr>
 </tbody>
 </table>
@@ -1384,7 +1384,7 @@
 </ul>
 </div>
 <div style="font-size: 65%">
-<div id="d0a6ddaf" class="cell" data-execution_count="7">
+<div id="7a236f46" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb6-1" class="hljs-ln-code"><a href=""></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
@@ -1394,7 +1394,7 @@
 <span id="cb6-5" class="hljs-ln-code"><a href=""></a></span>
 <span id="cb6-6" class="hljs-ln-code"><a href=""></a><span class="co"># Define hyperparameter grid</span></span>
 <span id="cb6-7" class="hljs-ln-code"><a href=""></a>param_grid <span class="op">=</span> {</span>
-<span id="cb6-8" class="hljs-ln-code"><a href=""></a>    <span class="st">'n_estimators'</span>: [<span class="dv">10</span>, <span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">200</span>],  <span class="co"># Number of trees in Bagging</span></span>
+<span id="cb6-8" class="hljs-ln-code"><a href=""></a>    <span class="st">'n_estimators'</span>: [<span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">500</span>],  <span class="co"># Number of trees in Bagging</span></span>
 <span id="cb6-9" class="hljs-ln-code"><a href=""></a>    <span class="st">'max_samples'</span>: [<span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">1.0</span>],  <span class="co"># Proportion of samples per tree</span></span>
 <span id="cb6-10" class="hljs-ln-code"><a href=""></a>    <span class="st">'min_samples_leaf'</span>: [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">10</span>],  <span class="co"># Minimum samples per leaf</span></span>
 <span id="cb6-11" class="hljs-ln-code"><a href=""></a>    <span class="st">'criterion'</span>: [<span class="st">"gini"</span>, <span class="st">"entropy"</span>],  <span class="co"># Splitting criterion</span></span>
@@ -1420,9 +1420,9 @@
 <span id="cb6-31" class="hljs-ln-code"><a href=""></a>test_perf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Best parameters: {'criterion': 'gini', 'max_samples': 1.0, 'min_samples_leaf': 5, 'n_estimators': 100}</code></pre>
+<pre><code>Best parameters: {'criterion': 'gini', 'max_samples': 0.5, 'min_samples_leaf': 2, 'n_estimators': 100}</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="15">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1476,19 +1476,19 @@
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">Bagging</td>
-<td>0.803279</td>
-<td>0.862069</td>
-<td>0.757576</td>
+<td>0.770492</td>
 <td>0.806452</td>
-<td>0.807359</td>
+<td>0.757576</td>
+<td>0.781250</td>
+<td>0.771645</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">RF</td>
-<td>0.836066</td>
-<td>0.870968</td>
-<td>0.818182</td>
-<td>0.843750</td>
-<td>0.837662</td>
+<td>0.819672</td>
+<td>0.866667</td>
+<td>0.787879</td>
+<td>0.825397</td>
+<td>0.822511</td>
 </tr>
 </tbody>
 </table>
@@ -1736,7 +1736,7 @@ h_i&amp;=\frac{\partial^2 L(y_i,F_t(\text{x}))}{\partial F_t(\text{x})^2}\|_{F_t
 <ul>
 <li>Heart Disease Dataset</li>
 </ul>
-<div id="7f26c1ae" class="cell" data-execution_count="8">
+<div id="07a66b3c" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a>importances <span class="op">=</span> best_model.feature_importances_</span>
@@ -1752,13 +1752,13 @@ h_i&amp;=\frac{\partial^2 L(y_i,F_t(\text{x}))}{\partial F_t(\text{x})^2}\|_{F_t
 <span id="cb8-11"><a href=""></a>             text<span class="op">=</span>np.<span class="bu">round</span>(importance_df[<span class="st">'Importance'</span>], <span class="dv">3</span>),</span>
 <span id="cb8-12"><a href=""></a>             color<span class="op">=</span><span class="st">'Importance'</span>, color_continuous_scale<span class="op">=</span><span class="st">'Viridis'</span>)</span>
 <span id="cb8-13"><a href=""></a></span>
-<span id="cb8-14"><a href=""></a>fig.update_layout(xaxis_title<span class="op">=</span><span class="st">"Features"</span>, yaxis_title<span class="op">=</span><span class="st">"Importance Score"</span>, coloraxis_showscale<span class="op">=</span><span class="va">False</span>, height<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb8-14"><a href=""></a>fig.update_layout(xaxis_title<span class="op">=</span><span class="st">"Features"</span>, yaxis_title<span class="op">=</span><span class="st">"Importance Score"</span>, coloraxis_showscale<span class="op">=</span><span class="va">False</span>, height<span class="op">=</span><span class="dv">400</span>, width<span class="op">=</span><span class="dv">900</span>)</span>
 <span id="cb8-15"><a href=""></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<div>                            <div id="d3ab21f1-b37d-41e7-b9ce-82b2922b37dd" class="plotly-graph-div" style="height:300px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("d3ab21f1-b37d-41e7-b9ce-82b2922b37dd")) {                    Plotly.newPlot(                        "d3ab21f1-b37d-41e7-b9ce-82b2922b37dd",                        [{"alignmentgroup":"True","hovertemplate":"Features=%{x}\u003cbr\u003eImportance Score=%{marker.color}\u003cbr\u003etext=%{text}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":[0.1417000972562896,0.1404022193365222,0.13077413451840722,0.11353321508188047,0.11165317407420425,0.05789057065627498,0.049820086379477255,0.042707952783505004,0.03891974806716467,0.030322007460404844,0.029316095763493956,0.02830774904969472,0.018499682158027782,0.016535556980757024,0.013075159183487438,0.011243379027139138,0.00965157723405826,0.008122625210122261,0.0041570081754286154,0.0033679616036604207,0.0,0.0],"coloraxis":"coloraxis","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"v","showlegend":false,"text":[0.142,0.14,0.131,0.114,0.112,0.058,0.05,0.043,0.039,0.03,0.029,0.028,0.018,0.017,0.013,0.011,0.01,0.008,0.004,0.003,0.0,0.0],"textposition":"auto","x":["thal_3","exang_1","thalach","thal_2","oldpeak","chol","age","cp_2","trestbps","sex_1","slope_1","slope_2","ca_2","ca_1","restecg_1","cp_1","ca_3","cp_3","thal_1","fbs_1","ca_4","restecg_2"],"xaxis":"x","y":[0.1417000972562896,0.1404022193365222,0.13077413451840722,0.11353321508188047,0.11165317407420425,0.05789057065627498,0.049820086379477255,0.042707952783505004,0.03891974806716467,0.030322007460404844,0.029316095763493956,0.02830774904969472,0.018499682158027782,0.016535556980757024,0.013075159183487438,0.011243379027139138,0.00965157723405826,0.008122625210122261,0.0041570081754286154,0.0033679616036604207,0.0,0.0],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Features"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Importance Score"}},"coloraxis":{"colorbar":{"title":{"text":"Importance Score"}},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"showscale":false},"legend":{"tracegroupgap":0},"title":{"text":"Feature Importance (Random Forest)"},"barmode":"relative","height":300},                        {"responsive": true}                    ).then(function(){
+<div>                            <div id="f4d6f7aa-cdd7-4735-ade2-5dd90220e4e7" class="plotly-graph-div" style="height:400px; width:900px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f4d6f7aa-cdd7-4735-ade2-5dd90220e4e7")) {                    Plotly.newPlot(                        "f4d6f7aa-cdd7-4735-ade2-5dd90220e4e7",                        [{"alignmentgroup":"True","hovertemplate":"Features=%{x}\u003cbr\u003eImportance Score=%{marker.color}\u003cbr\u003etext=%{text}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":[0.13406961191318403,0.1330156056932091,0.10333983023255279,0.09040585573476613,0.08852081957712947,0.08085674697188014,0.06693336211132943,0.06239731951391892,0.04092141343157266,0.03248819145957898,0.02960617813174012,0.02689854800473288,0.02262020770081707,0.022252395059081467,0.019622164260479594,0.016538495812680406,0.009969704037135867,0.007109936287066098,0.00650980653665618,0.004620667220683973,0.0011125325382444098,0.0001906077715600747],"coloraxis":"coloraxis","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"v","showlegend":false,"text":[0.134,0.133,0.103,0.09,0.089,0.081,0.067,0.062,0.041,0.032,0.03,0.027,0.023,0.022,0.02,0.017,0.01,0.007,0.007,0.005,0.001,0.0],"textposition":"auto","x":["thal_3","thalach","oldpeak","exang_1","thal_2","age","trestbps","chol","cp_2","ca_2","sex_1","slope_1","restecg_1","ca_1","slope_2","cp_1","cp_3","fbs_1","ca_3","thal_1","restecg_2","ca_4"],"xaxis":"x","y":[0.13406961191318403,0.1330156056932091,0.10333983023255279,0.09040585573476613,0.08852081957712947,0.08085674697188014,0.06693336211132943,0.06239731951391892,0.04092141343157266,0.03248819145957898,0.02960617813174012,0.02689854800473288,0.02262020770081707,0.022252395059081467,0.019622164260479594,0.016538495812680406,0.009969704037135867,0.007109936287066098,0.00650980653665618,0.004620667220683973,0.0011125325382444098,0.0001906077715600747],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Features"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Importance Score"}},"coloraxis":{"colorbar":{"title":{"text":"Importance Score"}},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"showscale":false},"legend":{"tracegroupgap":0},"title":{"text":"Feature Importance (Random Forest)"},"barmode":"relative","height":400,"width":900},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('d3ab21f1-b37d-41e7-b9ce-82b2922b37dd');
+var gd = document.getElementById('f4d6f7aa-cdd7-4735-ade2-5dd90220e4e7');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
