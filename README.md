@@ -1,8 +1,10 @@
 # **CSCI 866 001: Data Mining and Knowledge Discovery**
 
+<a href="https://hassothea.github.io/">Lecturer: HAS Sothea, PhD</a>
+
 ![](https://github.com/hassothea/Data_Analysis_AUPP/blob/main/Slides/img/AUPP_Logo.png?raw=true?raw=true)
 
-<a href="https://hassothea.github.io/">HAS Sothea, PhD</a>
+
 
 - [👋 **Introduction**](#-introduction)
   - [📋 **Course Overview**](#-course-overview)
@@ -280,5 +282,6 @@ Mining**.
   target="_blank">R for Data Science, Hadley W. and Garrett G.</a>
 
 ------------------------------------------------------------------------
+
 
 
