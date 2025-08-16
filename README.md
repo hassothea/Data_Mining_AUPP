@@ -1,5 +1,4 @@
-# **CSCI 866 001 <img
-src="https://github.com/hassothea/Data_Analysis_AUPP/blob/main/Slides/img/AUPP_Logo.png?raw=true?raw=true"
+# **CSCI 866 001 <img src="https://github.com/hassothea/Data_Analysis_AUPP/blob/main/Slides/img/AUPP_Logo.png?raw=true?raw=true"
 style="position: relative; bottom: 5px;width:0.55556in" /><br>Data
 Mining and Knowledge Discovery**
 <a href="https://hassothea.github.io/">HAS Sothea, PhD</a>
@@ -123,13 +122,7 @@ decisions and insights. If you are looking to enhance your skills in
 
 ------------------------------------------------------------------------
 
-**Note**: The following table of contents will be progressively updated
-according to the course advancement.
-
-| Topic | Lab | Solution | Remark |
-|:---|:--:|:--:|:--:|
-| <a href="" target="_blank">Introduction to Data Mining &amp; KDD
-Process</a> | Lab1 | Solution1 | …Loading |
+> **Visit the course webpage:** [CSCI 866 001: Data Mining](https://hassothea.github.io/Data_Mining_AUPP/).
 
 <!-- https://www.geeksforgeeks.org/kdd-process-in-data-mining/ -->
 
@@ -287,3 +280,4 @@ Mining**.
   target="_blank">R for Data Science, Hadley W. and Garrett G.</a>
 
 ------------------------------------------------------------------------
+
